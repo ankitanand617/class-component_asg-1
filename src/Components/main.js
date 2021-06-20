@@ -1,30 +1,27 @@
 import React, { Component } from 'react'
 
 export default class main extends Component {
-    constructor() {
-        super()
-    
-        this.state = {
-             message:""
-        }
+    constructor(props) {
+        super(props);
+    this.state = {
+      isShow:""
     }
-
-        change()
-        {
-            this.setState({
-                message:"Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-            })
-        }
+    this.btnClick = this.btnClick.bind(this);
+    };
     
+  btnClick() {
+    //console.log('btn clicked');
+    this.setState({isShow: <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>});
+  }
     
-
-
     render() {
-        return (
-            <div>
-                <button id="click" onClick={()=>this.change()}>Click</button>
-                <p id="para">{this.state.message}</p>
+        return(
+            <div id="main">
+                { /* Do not remove this main div!! */ }
+      <h1>Hello Sehdev Kumar</h1>
+      <button id="click" onClick={this.btnClick}>click me</button>
+      {this.state.isShow}
             </div>
-        )
+        );
     }
 }
