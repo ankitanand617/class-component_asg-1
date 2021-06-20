@@ -18,7 +18,7 @@ export default class main extends Component {
         return(
             <div id="main">
                 { /* Do not remove this main div!! */ }
-      <h1>Hello Sehdev Kumar</h1>
+      
       <button id="click" onClick={this.btnClick}>click me</button>
       {this.state.isShow}
             </div>
